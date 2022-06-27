@@ -4,7 +4,7 @@ let addButton = document.querySelector('.addToDo')
 
 // Get the delete button from the list item
 // let deleteBtn = document.querySelector('.deleteListItem')
-// let individualItem = document.querySelector('indivListItem')
+let individualItem = document.querySelector('indivListItem')
 
 
 // when user clicks on the add button, the text from the input
@@ -31,6 +31,9 @@ addButton.addEventListener('click', addListItem)
     // console.log(inputTextValue)
     listItemText.innerHTML = inputTextValue
     deleteBtn.innerHTML = 'X'
+
+    deleteBtn.addEventListener('click', () => {console.log('clicked')})
+
 
     list.appendChild(listItemText)
     list.appendChild(deleteBtn)
