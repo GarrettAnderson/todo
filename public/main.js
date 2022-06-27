@@ -3,7 +3,9 @@ let inputText = document.querySelector('.inputToDo')
 let addButton = document.querySelector('.addToDo')
 
 // Get the delete button from the list item
-let deleteBtn = document.querySelector('.deleteListItem')
+// let deleteBtn = document.querySelector('.deleteListItem')
+// let individualItem = document.querySelector('indivListItem')
+
 
 // when user clicks on the add button, the text from the input
 // appears in the list below the input area
@@ -13,25 +15,34 @@ addButton.addEventListener('click', addListItem)
     // and a button to edit the text
 
 
-    // when click on the add button, run a function that
-    // takes the text content from the input and
-    // adds as an li html element in toDoList
-      function addListItem () {
-        console.log('click add button')
+// when click on the add button, run a function that
+// takes the text content from the input and
+// adds as an li html element in toDoList
+  function addListItem () {
+    console.log(individualItem)
 
-        let li = document.createElement('li')
-        let inputTextValue = inputText.value
-        console.log(inputTextValue)
-        li.innerHTML = `${inputTextValue}`
-        let toDoList = document.querySelector('.toDoList')
+    let list = document.createElement('li')
+    list.classList.add('indivListItem')
 
-        toDoList.appendChild(li)
+    let listItemText = document.createElement('span')
+    let deleteBtn = document.createElement('button')
 
-        inputTextValue = ''
-      }
+    let inputTextValue = inputText.value
+    // console.log(inputTextValue)
+    listItemText.innerHTML = inputTextValue
+    deleteBtn.innerHTML = 'X'
+
+    list.appendChild(listItemText)
+    list.appendChild(deleteBtn)
+
+    let toDoList = document.querySelector('.toDoList')
+
+    toDoList.appendChild(list)
+  }
 
 
-    // Function that removes todo list item
-      function deleteListItem() {
-        console.log('delete btn clicked')
-      }
+// Function that removes todo list item. When user clicks on list item,
+// the text is striked out
+  function deleteListItem() {
+    console.log('delete btn clicked')
+  }
