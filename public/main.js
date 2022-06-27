@@ -4,7 +4,7 @@ let addButton = document.querySelector('.addToDo')
 
 // Get the delete button from the list item
 // let deleteBtn = document.querySelector('.deleteListItem')
-let individualItem = document.querySelector('indivListItem')
+
 
 
 // when user clicks on the add button, the text from the input
@@ -19,7 +19,6 @@ addButton.addEventListener('click', addListItem)
 // takes the text content from the input and
 // adds as an li html element in toDoList
   function addListItem () {
-    console.log(individualItem)
 
     let list = document.createElement('li')
     list.classList.add('indivListItem')
@@ -32,7 +31,7 @@ addButton.addEventListener('click', addListItem)
     listItemText.innerHTML = inputTextValue
     deleteBtn.innerHTML = 'X'
 
-    deleteBtn.addEventListener('click', () => {console.log('clicked')})
+    deleteBtn.addEventListener('click', () => {deleteListItem(list)})
 
 
     list.appendChild(listItemText)
@@ -46,6 +45,12 @@ addButton.addEventListener('click', addListItem)
 
 // Function that removes todo list item. When user clicks on list item,
 // the text is striked out
-  function deleteListItem() {
-    console.log('delete btn clicked')
+  function deleteListItem(item) {
+    console.log(item)
+    // item.strike()
+    item.classList.add('strikethrough')
+    // Get the individual todo list item
+     let individualItem = document.querySelector('indivListItem')
+    console.log(individualItem)
+
   }
