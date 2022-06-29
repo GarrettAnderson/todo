@@ -16,6 +16,16 @@ body {
   align-items: center;
 }
 
+h1 {
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+input.inputToDo {
+    width: 450px;
+    padding: 2rem;
+}
+
 .strikethrough {
   text-decoration-line: line-through;
 }
