@@ -22,7 +22,6 @@ h1 {
 }
 
 input {
-    width: 450px;
     padding: 2rem;
     font-size: 3rem;
 }
@@ -42,4 +41,7 @@ button.addToDo {
 .inputAddSection {
     display: flex;
     height: 7rem;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: center;
 }
