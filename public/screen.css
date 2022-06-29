@@ -21,11 +21,25 @@ h1 {
   font-size: 4rem;
 }
 
-input.inputToDo {
+input {
     width: 450px;
     padding: 2rem;
+    font-size: 3rem;
+}
+
+button.addToDo {
+  border: none;
+  background: transparent;
+  font-size: 3rem;
+  position: relative;
+  right: 3rem;
 }
 
 .strikethrough {
   text-decoration-line: line-through;
+}
+
+.inputAddSection {
+    display: flex;
+    height: 7rem;
 }
