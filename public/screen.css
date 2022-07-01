@@ -45,3 +45,11 @@ button.addToDo {
     margin: 0 auto;
     justify-content: center;
 }
+
+.toDoList {
+  list-style: none;
+}
+
+.indivListItem span {
+  font-size: 3rem;
+}
