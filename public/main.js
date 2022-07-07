@@ -48,6 +48,7 @@ addButton.addEventListener('click', addListItem)
   function deleteListItem(item) {
     console.log(item)
     // item.strike()
+    item.remove()
     item.classList.add('strikethrough')
     // Get the individual todo list item
      let individualItem = document.querySelector('indivListItem')
