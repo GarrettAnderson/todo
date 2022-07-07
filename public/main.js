@@ -31,8 +31,12 @@ addButton.addEventListener('click', addListItem)
     listItemText.innerHTML = inputTextValue
     deleteBtn.innerHTML = 'X'
 
-    deleteBtn.addEventListener('click', () => {deleteListItem(list)})
-
+    deleteBtn.addEventListener('click', () => {
+      deleteListItem(list)
+    })
+    listItemText.addEventListener('click', () => {
+      list.classList.add('strikethrough')
+    })
 
     list.appendChild(listItemText)
     list.appendChild(deleteBtn)
