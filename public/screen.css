@@ -89,8 +89,18 @@ button.addToDo {
   left: -20px;
   border-top: 1px solid;
   box-shadow: 0px 5px 10px grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .indivListItem span {
   font-size: 3rem;
 }
+
+.indivListItem button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: rgba(175, 47, 47, 0.75);
+  }

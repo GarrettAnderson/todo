@@ -35,7 +35,7 @@ addButton.addEventListener('click', addListItem)
       deleteListItem(list)
     })
     listItemText.addEventListener('click', () => {
-      list.classList.add('strikethrough')
+      listItemText.classList.add('strikethrough')
     })
 
     list.appendChild(listItemText)
@@ -53,7 +53,7 @@ addButton.addEventListener('click', addListItem)
     console.log(item)
     // item.strike()
     item.remove()
-    item.classList.add('strikethrough')
+    // item.classList.add('strikethrough')
     // Get the individual todo list item
      let individualItem = document.querySelector('indivListItem')
     console.log(individualItem)
